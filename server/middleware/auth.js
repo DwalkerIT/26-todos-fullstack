@@ -9,9 +9,12 @@ export function attachUser(req, res, next) {
         if (token === undefined) {
             next()
         }
+        console.log('TOKEN', token)
         const decoded = jwtToken.decode(token)
         if (decoded) {
-            req.user = { id: decoded.id, username: decoded.username }
+            // req.user = { id: decoded.id, username: decoded.username }
+            req.user = decoded
+            // req.isCool = true 
         }
     }
     next()

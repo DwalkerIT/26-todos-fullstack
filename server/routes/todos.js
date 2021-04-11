@@ -2,6 +2,8 @@ import express from 'express'
 const router = express.Router()
 import conn from '../db.js'
 
+
+//search by description...
 router.get('/todos', async (req, res) => {
     const todos = await conn.raw(`
         SELECT
