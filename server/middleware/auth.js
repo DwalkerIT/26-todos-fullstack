@@ -15,7 +15,7 @@ export function attachUser(req, res, next) {
             // req.user = { id: decoded.id, username: decoded.username }
             req.user = decoded
             // req.isCool = true 
-        }
+        } 
     }
     next()
 }
